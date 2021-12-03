@@ -1,0 +1,39 @@
+<div id="welcome">
+<form (ngSubmit)="saveGroup()" class="groupForm" [formGroup]="userSignUp">
+ 
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>firstName</mat-label>
+        <input matInput placeholder="abc@gmail.com" value="firstName" formControlName="firstName" name="firstName">
+      </mat-form-field>
+<br>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>lastName</mat-label>
+        <input matInput placeholder="abc@gmail.com" value="lastName" formControlName="lastName" name="lastName">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="abc@gmail.com" value="email" formControlName="email" name="email">
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>address</mat-label>
+        <input matInput placeholder="abc@gmail.com" value="address" formControlName="address" name="address">
+      </mat-form-field>
+
+    <!-- <label for="exampleFormControlInput1" >First Name</label>
+    <input type="text" formControlName="firstName" name="firstName"><br>
+    <label for="exampleFormControlInput1" >Last Name</label>
+    <input type="text" formControlName="lastName" name="lastName"><br>
+    <label for="exampleFormControlInput1" >email</label>
+    <input type="email" formControlName="email" name="email"><br>
+    <label for="exampleFormControlInput1">address</label>
+    <input type="text" formControlName="address" name="address"><br>-->
+    <br>
+    <input id="submitButton" type="submit" class="btn btn-primary" value="Sign up"> 
+</form>
+
+<br><br>
+  <label for="exampleFormControlInput1">Already a registered User?</label><br>
+<a routerLink="/book" routerLinkActive="active"> Click Here</a>
+</div>

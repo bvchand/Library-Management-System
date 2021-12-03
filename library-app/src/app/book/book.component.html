@@ -1,0 +1,102 @@
+
+<mat-tab-group>
+    <mat-tab label="Books"> 
+        <div class="container mt-5">
+  
+            <h2>Books in the library</h2>
+            
+            <table class="table table-striped">
+              <thead>
+                  <tr>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>availability</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let row of allBooks">
+                  <td>{{ row.title }}</td>
+                  <td>{{ row.author_first_name+' '+row.author_last_name}}</td>
+                  <td>{{ row.price }}</td>
+                  <td>{{ row.availability }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+
+    </mat-tab>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <mat-tab label="Get a Book"> 
+        <form class="example-form" (ngSubmit)="getBook()" class="takeBook" [formGroup]="takeBook">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="abc@gmail.com" value="email" formControlName="email" name="email">
+            </mat-form-field>
+          <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Book Title</mat-label>
+              <input matInput placeholder="Harry Potter" value="title" formControlName="title" name="title">
+            </mat-form-field>
+            <br>
+            <input mat-buitton type="submit" class="btn btn-primary" value="Issue">
+          </form> </mat-tab>
+
+
+    <mat-tab label="Return a book"> 
+        <form class="example-form" (ngSubmit)="returnBookMethod()" class="returnBook" [formGroup]="returnBook">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="abc@gmail.com" value="email" formControlName="email" name="email">
+            </mat-form-field>
+          <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Book Title</mat-label>
+              <input matInput placeholder="Harry Potter" value="title" formControlName="title" name="title">
+            </mat-form-field>
+            <br>
+            <input mat-buitton type="submit" class="btn btn-primary" value="Return">
+          </form>
+    </mat-tab>
+
+    <mat-tab label="Get History"> 
+        <form class="example-form" (ngSubmit)="getHistory()" class="getUserHist" [formGroup]="getUserHist">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="abc@gmail.com" value="email" formControlName="email" name="email">
+            </mat-form-field>
+          <br>
+            <input mat-buitton type="submit" class="btn btn-primary" value="Get history">
+          </form>
+    </mat-tab>
+
+
+
+
+  </mat-tab-group>
